@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>PCB DEFECT DETECTION</title>
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"></link> -->
+        <!-- Favicon-->
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="http://127.0.0.1:5000/static/css/styles.css" rel="stylesheet" />
+        <style>
+            #Box{
+                padding: 25px;
+                background-color: white;
+                height: 60vh;
+            }
+            .row{
+                margin-top: 150px;
+            }
+            body{
+                background-color: aliceblue;
+            }
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <!-- <li class="nav-item"><a class="nav-link" href="#page-top">AUTISM</a></li> -->
+                <a class="navbar-brand h1" href="/home">PCB DEFECT DETECTION</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="/home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="container">
+            <div class="row">
+                <center><div class="col-lg-4">
+                    <div id="Box">
+                        <center><h3>PCB DEFECT DETECTION</h3></center>
+                        <hr>
+                        <br>
+                        <form method="post" action="/analyse">
+                            <label for=""><center>Select input image</center></label>
+                            <input type="file" class="form-control" name="img" id="transcript" placeholder="Speak" />
+                            <br>
+                            <input type="submit" value="Submit" class="btn btn-success">
+                          </form>
+                    </div>
+                    <br>
+                </div></center>
+                <div class="col-lg-4">
+                    <div id="Box">
+                        <center><h3>Input image</h3></center>
+                        <hr>
+                        <br>
+                        {% if ImageDisplay %}
+                        <img src="{{ImageDisplay}}" style="width:100%" alt="">
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div id="Box">
+                        <center><h3>Gray scale</h3></center>
+                        <hr>
+                        <br>
+                  
+                        <img src="http://127.0.0.1:5000/static/processed/grayscale.jpg" style="width:100%" alt="">
+               
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div id="Box">
+                        <center><h3>Edges</h3></center>
+                        <hr>
+                        <br>
+                        <img src="http://127.0.0.1:5000/static/processed/edges.jpg" style="width:100%" alt="">
+                    </div>
+                    <br>
+                </div>
+               <center><div class="col-lg-4" style="text-align: center;">
+                    <div id="Box">
+                        <center><h3>Output image</h3></center>
+                        <hr>
+                        <br>
+                        {% if ImageDisplay1 %}
+                        <img src="{{ImageDisplay1}}" style="width:100%" alt="">
+                        {% endif %}
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <center><h3>Analysis Chart</h3></center>
+                    <img src="http://127.0.0.1:5000/static/processed/analysis_chart.jpg" style="width:100%" style="height:100%" alt="Graph image">
+                </div></center>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="http://127.0.0.1:5000/static/js/scripts.js"></script>
+        
+    </body>
+</html>

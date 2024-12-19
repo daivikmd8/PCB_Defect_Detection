@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 14
+names: ['anold chiari malformation', 'arachnoid cyst', 'cerebellah hypoplasia', 'cisterna magna', 'colphocephaly', 'encephalocele', 'holoprosencephaly', 'hydracenphaly', 'intracranial hemorrdge', 'intracranial tumor', 'mild ventriculomegaly', 'moderate ventriculomegaly', 'polencephaly', 'severe ventriculomegaly']
+
+roboflow:
+  workspace: computer-vision-m75wg
+  project: fetal-brain-abnormality-classification
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/computer-vision-m75wg/fetal-brain-abnormality-classification/dataset/2
